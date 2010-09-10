@@ -1,7 +1,8 @@
 {
 	"name": "igLite",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "Get rid of the huge iGoogle header.",
+	"icons": { "48": "iglite48.png" },
 	"content_scripts": [
 		{
 			"matches": ["http://www.google.com/ig*",
