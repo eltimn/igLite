@@ -1,23 +1,18 @@
-var hideSwitch = $(document.createElement("a")).text(" hide search pane");
-var showSwitch = $(document.createElement("a")).text(" show search pane");
-
+var hint = $(document.createElement("a")).text(" show search pane");
+$("#gbar").append(hint);
 function show_header()
 {
 	$('#nhdrwrap').slideDown();
-	hideSwitch.show();
-	showSwitch.hide();
+	hint.fadeOut();
 }
 
 function hide_header()
 {
 	$('#nhdrwrap').slideUp();
-	showSwitch.show();
-	hideSwitch.hide();
+	hint.fadeIn();
 }
 
-
-$("#gbar").append(showSwitch);
-$("#gbar").append(hideSwitch);
-showSwitch.click(show_header);
-hideSwitch.click(hide_header);
+$("#guser").mouseenter(show_header);
+$("#gbar").mouseenter(show_header);
+$("#nhdrwrap").mouseleave(hide_header);
 hide_header();
