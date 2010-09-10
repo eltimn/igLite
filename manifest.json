@@ -1,0 +1,13 @@
+{
+	"name": "igLite",
+	"version": "1.0.1",
+	"description": "Get rid of the huge iGoogle header.",
+	"content_scripts": [
+		{
+			"matches": ["http://www.google.com/ig",
+				    "http://google.com/ig"],
+			"js": ["jquery.js", "iglite.js"],
+			"run_at": "document_end"
+		}
+	]
+}
